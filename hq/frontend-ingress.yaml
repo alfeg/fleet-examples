@@ -5,7 +5,7 @@ metadata:
   namespace: default
 spec:
   rules:
-  - host: demo-hq.alfeg.net
+  - host: hq-demo.alfeg.net
     http:
       paths:
       - backend:
