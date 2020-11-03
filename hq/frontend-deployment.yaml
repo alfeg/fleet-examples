@@ -27,6 +27,6 @@ spec:
         - name: HQ_ConnectionStrings__DefaultConnection
           value: 'Server=192.168.88.72;Port=5432;User Id=postgres;Password=Qwerty1234;Database=SurveySolutions'
         - name: HQ_Headquarters__BaseUrl
-          value: http://localhost
+          value: https://demo-hq.alfeg.net
         ports:
         - containerPort: 80
