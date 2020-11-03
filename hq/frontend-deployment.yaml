@@ -14,13 +14,16 @@ spec:
         app: surveysolutions
         tier: frontend
     spec:
+      imagePullSecrets:
+        - name: regcred
       containers:
       - name: surveysolutions
-        image: surveysolutions/surveysolutions
+        image: docker.pkg.github.com/surveysolutions/surveysolutions/headquarters:29541
         resources:
           requests:
             cpu: 600m
             memory: 800Mi
+        
         env:
         - name: ASPNETCORE_ENVIRONMENT
           value: Production
