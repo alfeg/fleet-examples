@@ -22,20 +22,11 @@ spec:
         resources:
           requests:
             cpu: 600m
-            memory: 800Mi
-        
+            memory: 800Mi        
         env:
-        - name: ASPNETCORE_ENVIRONMENT
-          value: Production
         - name: HQ_ConnectionStrings__DefaultConnection
           value: 'Server=192.168.88.72;Port=5432;User Id=postgres;Password=Qwerty1234;Database=SurveySolutions'
         - name: HQ_Headquarters__BaseUrl
           value: http://localhost
-        - name: HQ_Headquarters__TenantName
-          value: survey
-        - name: Export_ExportSettings__DirectoryPath
-          value: /app/AppData/Export
-        - name: HQ_Logging__LogsLocation
-          value: /app/AppData/logs
         ports:
         - containerPort: 80
