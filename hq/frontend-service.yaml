@@ -5,6 +5,8 @@ metadata:
   labels:
     app: surveysolutions
     tier: frontend
+  annotations:
+    traefik.ingress.kubernetes.io/affinity: "true"
 spec:
   ports:
   - port: 80
