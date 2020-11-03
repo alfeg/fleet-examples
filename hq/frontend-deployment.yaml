@@ -18,7 +18,7 @@ spec:
         - name: regcred
       containers:
       - name: surveysolutions
-        image: ghcr.io/surveysolutions/surveysolutions/headquarters:29541
+        image: ghcr.io/surveysolutions/surveysolutions/headquarters:29545
         resources:
           requests:
             cpu: 600m
@@ -28,10 +28,6 @@ spec:
           value: 'Server=192.168.88.72;Port=5432;User Id=postgres;Password=Qwerty1234;Database=SurveySolutions'
         - name: HQ_Headquarters__BaseUrl
           value: https://hq-demo.alfeg.net
-        - name: HQ_Scheduler__InstanceId
-          value: AUTO
-        - name: HQ_Scheduler__IsClustered
-          value: "true"
         ports:
         - name: http
           containerPort: 80
