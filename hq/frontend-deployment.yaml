@@ -33,4 +33,13 @@ spec:
         - name: HQ_Scheduler__IsClustered
           value: "true"
         ports:
-        - containerPort: 80
+        - name: http
+          containerPort: 80
+        livenessProbe:
+          httpGet:
+            path: /.hc
+            port: http
+        readinessProbe:
+          httpGet:
+            path: /.hc/ready
+            port: http
